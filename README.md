@@ -1,121 +1,255 @@
-# RAX Study Germany
+# 🇩🇪 RAX Study Germany
 
-Free, open-source preparation for the move to Germany:
+**Free, open-source resources to prepare for German language exams, IELTS, studying in Germany, visa applications, and document attestation in Pakistan.**
 
-- **German A1 and A2** (Goethe-Zertifikat): exam patterns and marks, Lesen, Hören, Schreiben and Sprechen practice, grammar, 1,506 words with English meanings, 125 verbs, pronunciation, flashcards with spaced repetition, and A1/A2 mock-test generators.
-- **IELTS Academic**: original Listening, Reading, Writing and Speaking practice, a band calculator and a full mock-test generator.
-- **Germany visa guide**: plain-language guides to every main route (study, language course, Ausbildung, work, Opportunity Card, Schengen, family reunification and more), a seven-question route finder, document checklists, a fees and financing page with a cost calculator, a page for applicants in Pakistan, a source verification database and an application planner.
-- **Bachelor's in Germany**: what 12, 13 or more years of education from Pakistan mean for admission (Studienkolleg or direct, subject-related admission after one year of university study), a path checker, and how to apply through uni-assist.
-- **Document attestation (Pakistan)**: board verification, IBCC, HEC e-Attestation, MOFA general attestation and apostille, step by step, with a document route selector, a personal checklist, verified fees, offices and what Germany actually asks for.
+🌐 **Live Website:** https://raxstudygermany.netlify.app
 
-Live site: https://raxstudygermany.netlify.app
+RAX Study Germany is an independent educational platform built to help learners and applicants access practical study materials, interactive tools, and step-by-step guides in one place.
 
-> RAX Study Germany is an independent educational and information platform. It is not affiliated with IBCC, HEC, Pakistan's Ministry of Foreign Affairs, the German government, German Missions, Goethe-Institut, or IELTS. Document-attestation requirements depend on document type, destination, and the receiving authority. Always confirm current requirements through the official authority before submitting or paying for an application. RAX Study Germany does not guarantee visa eligibility, appointment availability, processing time, or approval.
+## ✨ Features
 
-## How it is built
+### 🇩🇪 German A1 & A2 — Goethe-Zertifikat Preparation
+- Exam patterns, marks, and practice for Lesen, Hören, Schreiben, and Sprechen.
+- Grammar lessons and explanations.
+- **1,506 vocabulary words** with English meanings.
+- **125 German verbs** and pronunciation support.
+- Interactive flashcards with spaced repetition.
+- A1 and A2 mock-test generators.
 
-Plain HTML, CSS and JavaScript. No framework, no build step, no server code, no tracking. Every page works when you open `index.html` straight from a folder.
+### 📝 IELTS Academic Preparation
+- Original Listening, Reading, Writing, and Speaking practice.
+- IELTS band score calculator.
+- Full mock-test generator.
+- Practice resources for developing exam skills.
 
+### 🛂 Germany Visa Guide
+Explore the main German visa and residence pathways:
+- Student visa.
+- Language course visa.
+- Ausbildung (vocational training).
+- Work visas.
+- Opportunity Card (Chancenkarte).
+- Schengen visa.
+- Family reunification and other routes.
+
+Additional tools include:
+- Seven-question visa route finder.
+- Route-specific document checklists.
+- Fees and financing guide with a cost calculator.
+- Guidance for applicants applying from Pakistan.
+- Source verification database.
+- Application planner.
+
+### 🎓 Bachelor's Degree in Germany
+Understand your admission options after completing education in Pakistan:
+- 12, 13, or more years of education.
+- Studienkolleg and the Feststellungsprüfung pathway.
+- Direct and subject-related admission possibilities.
+- How previous university study may affect eligibility.
+- Application guidance through uni-assist.
+- Interactive admission pathway checker.
+
+*Admission requirements vary by qualification, subject, university, and individual circumstances. Always verify eligibility with the relevant university or official admissions authority.*
+
+### 📄 Document Attestation in Pakistan
+Step-by-step guidance covering:
+- Educational board verification.
+- IBCC attestation.
+- HEC e-Attestation.
+- Ministry of Foreign Affairs (MOFA) attestation.
+- Apostille procedures.
+- Document route selector.
+- Personal document checklist.
+- Fees, processing information, offices, and Germany-specific requirements.
+
+The platform includes structured data to help users review fees, sources, and verification statuses.
+
+### 📊 Personal Progress Tracking
+- Practice scores and learning progress.
+- Flashcard progress.
+- Saved checklists and application plans.
+- Browser-based progress storage using `localStorage`.
+- Export and import personal progress as JSON.
+
+No account is required for these features.
+
+## 🖥️ Technology Stack
+
+- **HTML5** — page structure.
+- **CSS3** — responsive styling, light mode, and dark mode.
+- **Vanilla JavaScript** — interactive tools and learning features.
+- **Browser APIs** — speech synthesis, audio recording, and local storage.
+- **Netlify** — live website hosting.
+
+The website uses no frontend framework, build step, server-side code, or database. Its pages can be opened directly through `index.html`.
+
+## 📁 Project Structure
+
+```text
+raxstudygermany/
+├── index.html
+├── about.html
+├── disclaimer.html
+├── progress.html
+├── 404.html
+├── german/                 # German A1/A2 learning resources
+├── bachelor/               # Bachelor's admission guides
+├── ielts/                  # IELTS Academic practice
+├── visa/                   # Visa guides and tools
+│   └── work/               # Work-related visa routes
+├── attestation/             # Pakistan document attestation
+├── assets/
+│   ├── css/
+│   │   └── main.css         # Shared styles
+│   ├── js/
+│   │   ├── core.js          # Shared helpers and utilities
+│   │   └── data/            # Vocabulary, visa, and attestation data
+│   └── img/                 # Icons and images
+├── sitemap.xml
+├── robots.txt
+├── manifest.webmanifest
+├── netlify.toml
+├── CONTRIBUTING.md
+├── LICENSE
+└── README.md
 ```
-index.html               Home
-german/                  German A1/A2 pages
-bachelor/                Bachelor's in Germany guide (12 and 13 years of education, Studienkolleg, applying)
-ielts/                   IELTS Academic pages
-visa/                    Germany visa guide and tools
-visa/work/               Work routes
-attestation/             Pakistan document attestation guide and tools
-about.html, disclaimer.html, progress.html, 404.html
-assets/css/main.css      All styles (light and dark mode)
-assets/js/core.js        Shared helpers: storage, progress, speech, timers, recorder
-assets/js/*.js           One script per tool (practice engine, flashcards, mock tests, visa tools …)
-assets/js/data/*.js      Content and data files (vocabulary, practice sets, visa figures, attestation data)
-assets/img/              Favicon, app icons, social preview image
-sitemap.xml, robots.txt, manifest.webmanifest, netlify.toml
-```
 
-Learner progress (practice scores, flashcards, checklists, plans) is saved in the browser with `localStorage` and can be exported and imported as JSON on the **My progress** page.
+Individual JavaScript files implement the practice engine, flashcards, mock tests, visa tools, and other interactive features.
 
-## Run it locally
+## 🚀 Run Locally
 
-Open `index.html` in a browser. That is all.
+**Option 1: Open directly**
 
-If you prefer a local web server (closer to how it runs online):
+1. Download or clone this repository.
+2. Open the project folder.
+3. Open `index.html` in your browser.
 
-```
+**Option 2: Use a local web server**
+
+Requirements: Python 3.
+
+```bash
 python3 -m http.server 8000
 ```
 
-then visit http://localhost:8000.
+Open http://localhost:8000 in your browser.
 
-## Deploy to Netlify
+On Windows, you can also use:
 
-**Drag and drop:** log in to Netlify, open *Sites*, and drag this whole folder onto the upload area.
-
-**From GitHub (recommended, redeploys on every push):**
-
-1. Create a new repository on GitHub and push this folder:
-   ```
-   git init
-   git add .
-   git commit -m "RAX Study Germany"
-   git branch -M main
-   git remote add origin https://github.com/<your-user>/rax-german.git
-   git push -u origin main
-   ```
-2. In Netlify choose *Add new site → Import an existing project → GitHub* and pick the repository.
-3. Leave the build command empty. The publish directory is the repository root (already set in `netlify.toml`).
-
-`netlify.toml` adds security headers and a Content Security Policy. Netlify serves `404.html` automatically.
-
-## Deploy to GitHub Pages
-
-Enable Pages for the `main` branch, root folder. All links are relative, so the site works at `https://<user>.github.io/rax-german/`. Only `404.html` uses root links (`/…`), which work on a custom domain or a `<user>.github.io` repository.
-
-## Use your own domain
-
-The canonical URLs, Open Graph tags and sitemap use `https://raxstudygermany.netlify.app`. After you choose your address, replace it everywhere:
-
-```
-grep -rl "https://raxstudygermany.netlify.app" . | xargs sed -i "s#https://raxstudygermany.netlify.app#https://your-domain.example#g"
+```powershell
+py -m http.server 8000
 ```
 
-(On macOS use `sed -i ''`.)
+## 🌐 Deployment
 
-## Updating visa figures
+### Netlify — Recommended
 
-All changeable visa figures and sources live in **`assets/js/data/visa-data.js`** (`window.RAX_VISA`):
+Live website: https://raxstudygermany.netlify.app
 
-- `figures` — each fee or amount has `display`, `amount`, `currency`, `applies`, `route`, `jurisdiction`, `source`, `checked` (YYYY-MM-DD) and `status` (`Verified`, `Needs review`, `Outdated`).
-- `sources` — each official page has `title`, `url`, `summary`, `status` (`Verified`, `Needs review`, `Outdated`, `Archived`), `checked` and `jur`.
-- `routes` — the checklists and finder data for each route.
-- `lastReview` — the date shown as “Last checked” on visa pages.
+To deploy your own copy:
 
-When a figure changes, edit `display` and `amount`, set `checked` to today and `status` to `Verified`. Pages update the figure, its status badge, the fees table, the source database and the cost calculator from this file. If you cannot confirm a figure on an official page, set `display` to `Verify current requirement` and `status` to `Needs review` — never guess. The text around a figure is plain HTML; review the guide pages too when a rule (not just an amount) changes.
+1. Fork or push the repository to GitHub.
+2. Sign in to Netlify.
+3. Select **Add new site → Import an existing project**.
+4. Connect GitHub and select your repository.
+5. Leave the build command empty.
+6. Set the publish directory to the repository root.
+7. Deploy the site.
 
-The site does **not** update itself. Amounts often change on 1 January; plan a review then.
+The included `netlify.toml` provides deployment configuration and security headers.
 
-## Updating attestation information
+### GitHub Pages
 
-IBCC, HEC and MOFA fees, processing times and sources live in **`assets/js/data/attest-data.js`** (`window.RAX_ATTEST`). Each fee has `display`, `amount`, `applies`, `source`, `verificationStatus` and `lastVerifiedAt`. The fee table, cost estimate, route selector and checklist read this file. The step-by-step text on the IBCC, HEC, MOFA and Apostille pages is plain HTML: when a procedure changes, edit those pages and the matching stage items in `attest-data.js`. Procedures changed several times in 2024–2026 (HEC went fully online in May 2026; MOFA introduced a Digital Attestation System on 12 October 2026), so check the official portals before every review.
+1. Open your repository on GitHub.
+2. Go to **Settings → Pages**.
+3. Select **Deploy from a branch**.
+4. Choose `main` and `/(root)`.
+5. Click **Save**.
 
-## Self-hosting the fonts
+Your site will be available at:
 
-Pages load the Barlow typefaces from Google Fonts. To avoid contacting Google, download Barlow, Barlow Condensed and Barlow Semi Condensed (Open Font License) into `assets/fonts/`, add `@font-face` rules at the top of `main.css`, and remove the three Google Fonts lines from the `<head>` of each page. Also remove `https://fonts.googleapis.com` and `https://fonts.gstatic.com` from the Content Security Policy in `netlify.toml`.
+`https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/`
 
-## Speech and recording
+**Note:** Review `404.html` before deploying to a project subpath, because root-relative links may need adjustment. Also review the canonical URLs, Open Graph metadata, and sitemap when publishing your own copy.
 
-Read-aloud uses the browser’s Web Speech API (`speechSynthesis`) with German (`de-DE`) and English (`en-GB`) voices. If a phone reads German with an English voice, install a German voice in the system settings. The speaking recorder uses `MediaRecorder`; recordings stay in the browser.
+## 🔄 Maintaining Visa and Attestation Information
 
-## Contributing
+Visa fees, financial requirements, attestation procedures, and official policies can change. The project keeps much of this information in structured JavaScript data files.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Corrections to visa or attestation information must include the official source.
+### Visa data
 
-## Licence
+File: `assets/js/data/visa-data.js`
 
-- Code: [MIT](LICENSE).
-- Original learning content (practice texts, model answers, explanations): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-- Goethe-Zertifikat is a product of the Goethe-Institut. IELTS is jointly owned by the British Council, IDP IELTS and Cambridge University Press & Assessment. All practice material here is original.
+The `window.RAX_VISA` data structure contains:
+- `figures` — fees, amounts, applicability, sources, verification dates, and statuses.
+- `sources` — reference pages, summaries, jurisdictions, and verification statuses.
+- `routes` — route-specific checklist and visa finder data.
+- `lastReview` — the last review date displayed on visa pages.
 
-Made by Rohail Ahmed Sial: [GitHub](https://github.com/rohail-ahmed-sial), [LinkedIn](https://www.linkedin.com/in/rohailahmedsial), rohilahmedsial@gmail.com
-#   r a x s t u d y g e r m a n y  
- 
+### Attestation data
+
+File: `assets/js/data/attest-data.js`
+
+The `window.RAX_ATTEST` data structure contains fee details, applicable procedures, sources, verification statuses, and last verification dates.
+
+When updating information:
+1. Consult the relevant official authority.
+2. Update the data and the associated guide text.
+3. Record the verification date.
+4. Set the appropriate status.
+5. Mark unconfirmed information as needing review rather than guessing.
+
+**The website does not update its information automatically.** Review time-sensitive information regularly and before every application.
+
+## 🔐 Privacy
+
+- No login or registration is required.
+- No database is used.
+- Learning progress is stored locally in the user's browser.
+- Progress can be exported and imported as JSON.
+- Speaking recordings remain in the browser unless the user independently saves or shares them.
+
+Pages load Barlow typefaces from Google Fonts by default. For a fully self-hosted font setup, download the fonts into `assets/fonts/`, add local `@font-face` rules, and update the Content Security Policy accordingly.
+
+## 🤝 Contributing
+
+Contributions, corrections, and suggestions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Test the affected pages and tools.
+5. Submit a pull request describing your changes.
+
+For corrections to visa or attestation information, include a link to the relevant official source.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+
+## 📜 Licence
+
+- **Code:** [MIT License](LICENSE).
+- **Original learning content:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+Goethe-Zertifikat is a product of the Goethe-Institut. IELTS is jointly owned by the British Council, IDP IELTS, and Cambridge University Press & Assessment. All practice material on RAX Study Germany is original and is not presented as official exam material.
+
+## ⚠️ Disclaimer
+
+RAX Study Germany is an independent educational and informational platform. It is not affiliated with or endorsed by IBCC, HEC, Pakistan's Ministry of Foreign Affairs, the German government, German Missions, the Goethe-Institut, or IELTS.
+
+Document-attestation requirements depend on the document type, destination, and receiving authority. Always confirm current requirements with the appropriate official authority before submitting documents or making payments.
+
+This platform does not guarantee visa eligibility, appointment availability, processing times, university admission, or application approval. Its content is for general informational and educational purposes and does not replace official guidance.
+
+## 👨‍💻 Author
+
+**Rohail Ahmed Sial**
+
+- GitHub: [@rohail-ahmed-sial](https://github.com/rohail-ahmed-sial)
+- LinkedIn: [rohailahmedsial](https://www.linkedin.com/in/rohailahmedsial)
+- Email: rohilahmedsial@gmail.com
+
+---
+
+**Learn. Prepare. Apply with confidence. 🇩🇪**
+
+If RAX Study Germany helps you, consider giving the repository a ⭐ on GitHub!
